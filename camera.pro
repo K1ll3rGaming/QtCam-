@@ -4,20 +4,14 @@ TARGET = camera
 QT += multimedia multimediawidgets
 
 HEADERS = \
-    camera.h \
-    imagesettings.h \
-    videosettings.h
+    camera.h
 
 SOURCES = \
     main.cpp \
-    camera.cpp \
-    imagesettings.cpp \
-    videosettings.cpp
+    camera.cpp
 
 FORMS += \
-    camera.ui \
-    videosettings.ui \
-    imagesettings.ui
+    camera.ui
 
 target.path = $$[QT_INSTALL_EXAMPLES]/multimediawidgets/camera
 INSTALLS += target
