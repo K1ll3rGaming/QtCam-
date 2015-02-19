@@ -37,7 +37,7 @@
 ** $QT_END_LICENSE$
 **
 ****************************************************************************/
-
+/*
 #include "videosettings.h"
 #include "ui_videosettings.h"
 
@@ -189,3 +189,4 @@ void VideoSettings::selectComboBoxItem(QComboBox *box, const QVariant &value)
         }
     }
 }
+*/

@@ -37,7 +37,7 @@
 ** $QT_END_LICENSE$
 **
 ****************************************************************************/
-
+/*
 #ifndef VIDEOSETTINGS_H
 #define VIDEOSETTINGS_H
 
@@ -80,3 +80,4 @@ private:
 };
 
 #endif // VIDEOSETTINGS_H
+*/

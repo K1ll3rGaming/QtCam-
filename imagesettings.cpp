@@ -37,7 +37,7 @@
 ** $QT_END_LICENSE$
 **
 ****************************************************************************/
-
+/*
 #include "imagesettings.h"
 #include "ui_imagesettings.h"
 
@@ -123,3 +123,4 @@ void ImageSettings::selectComboBoxItem(QComboBox *box, const QVariant &value)
         }
     }
 }
+*/

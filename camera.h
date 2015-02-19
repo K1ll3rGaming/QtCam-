@@ -62,48 +62,46 @@ public:
 private slots:
     void setCamera(const QCameraInfo &cameraInfo);
 
-    void startCamera();
-    void stopCamera();
+//    void startCamera();
+//    void stopCamera();
 
-    void record();
-    void pause();
-    void stop();
-    void setMuted(bool);
+//    void record();
+//    void pause();
+//    void stop();
+//    void setMuted(bool);
 
-    void toggleLock();
+//    void toggleLock();
     void takeImage();
-    void displayCaptureError(int, QCameraImageCapture::Error, const QString &errorString);
+//    void displayCaptureError(int, QCameraImageCapture::Error, const QString &errorString);
 
-    void configureCaptureSettings();
-    void configureVideoSettings();
-    void configureImageSettings();
+//    void configureCaptureSettings();
+//    void configureVideoSettings();
+//    void configureImageSettings();
 
-    void displayRecorderError();
-    void displayCameraError();
+//    void displayRecorderError();
+//    void displayCameraError();
 
     void updateCameraDevice(QAction *action);
 
-    void updateCameraState(QCamera::State);
+//    void updateCameraState(QCamera::State);
     void updateCaptureMode();
-    void updateRecorderState(QMediaRecorder::State state);
-    void setExposureCompensation(int index);
+//    void updateRecorderState(QMediaRecorder::State state);
+//    void setExposureCompensation(int index);
 
     void updateRecordTime();
 
     void processCapturedImage(int requestId, const QImage &img);
-    void updateLockStatus(QCamera::LockStatus, QCamera::LockChangeReason);
+//    void updateLockStatus(QCamera::LockStatus, QCamera::LockChangeReason);
 
     void displayViewfinder();
     void displayCapturedImage();
 
-    void readyForCapture(bool ready);
+//    void readyForCapture(bool ready);
     void imageSaved(int id, const QString &fileName);
 
-    void on_takeImageButton_pressed();
-
 protected:
-    void keyPressEvent(QKeyEvent *event);
-    void keyReleaseEvent(QKeyEvent *event);
+//    void keyPressEvent(QKeyEvent *event);
+//    void keyReleaseEvent(QKeyEvent *event);
     void closeEvent(QCloseEvent *event);
 
 private:
@@ -111,12 +109,12 @@ private:
 
     QCamera *camera;
     QCameraImageCapture *imageCapture;
-    QMediaRecorder* mediaRecorder;
+//    QMediaRecorder* mediaRecorder;
 
-    QImageEncoderSettings imageSettings;
-    QAudioEncoderSettings audioSettings;
-    QVideoEncoderSettings videoSettings;
-    QString videoContainerFormat;
+//    QImageEncoderSettings imageSettings;
+//    QAudioEncoderSettings audioSettings;
+//    QVideoEncoderSettings videoSettings;
+//    QString videoContainerFormat;
     bool isCapturingImage;
     bool applicationExiting;
 };

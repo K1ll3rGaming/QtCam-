@@ -37,7 +37,7 @@
 ** $QT_END_LICENSE$
 **
 ****************************************************************************/
-
+/*
 #ifndef IMAGESETTINGS_H
 #define IMAGESETTINGS_H
 
@@ -80,3 +80,4 @@ private:
 };
 
 #endif // IMAGESETTINGS_H
+*/
