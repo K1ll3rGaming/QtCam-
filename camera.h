@@ -19,6 +19,7 @@ private slots:
     void displayViewfinder();
     void displayCapturedImage();
     void imageSaved(int id, const QString &fileName);
+
 private:
     Ui::Camera *ui;
     QCamera *camera;

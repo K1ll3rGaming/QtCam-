@@ -3,6 +3,7 @@
 #include <QCameraViewfinder>
 #include <QCameraInfo>
 #include <QTimer>
+#include <QDebug>
 Q_DECLARE_METATYPE(QCameraInfo)
 Camera::Camera(QWidget *parent) :
     QMainWindow(parent),
@@ -30,13 +31,11 @@ void Camera::setCamera(const QCameraInfo &cameraInfo)
     connect(imageCapture, SIGNAL(imageSaved(int,QString)), this, SLOT(imageSaved(int,QString)));
     camera->start();
 }
-int i=0;
+int i=0,j=0;
 void Camera::processCapturedImage(int requestId, const QImage& img)
 {
     Q_UNUSED(requestId);
-    QImage scaledImage = img.scaled(ui->viewfinder->size(),
-                                    Qt::KeepAspectRatio,
-                                    Qt::SmoothTransformation);
+    QImage scaledImage = img.scaled(ui->viewfinder->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation);
     ui->lastImagePreviewLabel->setPixmap(QPixmap::fromImage(scaledImage));
     // Display captured image for 3 seconds.
     displayCapturedImage();
@@ -47,8 +46,9 @@ void Camera::processCapturedImage(int requestId, const QImage& img)
 }
 void Camera::takeImage()
 {
-  isCapturingImage = true;
-  imageCapture->capture();
+    isCapturingImage = true;
+    imageCapture->capture();
+    isCapturingImage = false;
 }
 void Camera::displayViewfinder()
 {
@@ -62,6 +62,11 @@ void Camera::imageSaved(int id, const QString &fileName)
 {
     Q_UNUSED(id);
     Q_UNUSED(fileName);
-
     isCapturingImage = false;
+    if(j<5){
+        Camera::takeImage();
+        j++;
+    }
+    else if(j==5)
+        j=1;
 }
